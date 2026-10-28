@@ -1,0 +1,934 @@
+/* ===================================
+   1. PENGATURAN DASAR
+=================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --biru: #35a9e8;
+    --biru-tua: #1769aa;
+    --biru-muda: #dff6ff;
+    --pink: #ff6397;
+    --pink-muda: #fff0f6;
+    --kuning: #ffe27a;
+    --hijau: #70d6a3;
+    --ungu: #b99aff;
+    --putih: #ffffff;
+    --teks: #29445f;
+    --abu: #71869b;
+    --garis: #d7eaf6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Nunito', sans-serif;
+    color: var(--teks);
+    background: linear-gradient(
+        160deg,
+        #dff7ff 0%,
+        #fff5fb 55%,
+        #fff2d9 100%
+    );
+}
+
+
+/* ===================================
+   2. HEADER WEBSITE
+=================================== */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 6%;
+    background: rgba(255, 255, 255, 0.92);
+    border-bottom: 2px solid #d9f1ff;
+    box-shadow: 0 5px 20px rgba(53, 169, 232, 0.08);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    background: #e4f7ff;
+    font-size: 36px;
+}
+
+.logo h2 {
+    margin: 0;
+    color: var(--biru-tua);
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.logo p {
+    margin: 4px 0 0;
+    color: var(--abu);
+    font-size: 13px;
+}
+
+.tahun-ajaran {
+    padding: 10px 18px;
+    border-radius: 30px;
+    background: #e7f5ff;
+    color: var(--biru-tua);
+    font-size: 13px;
+    font-weight: 900;
+}
+
+
+/* ===================================
+   3. TATA LETAK UTAMA
+=================================== */
+
+.container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 30px;
+    max-width: 1250px;
+    margin: 35px auto;
+    padding: 0 25px;
+}
+
+
+/* ===================================
+   4. BAGIAN SAMBUTAN
+=================================== */
+
+.welcome {
+    position: relative;
+    min-width: 0;
+    padding: 20px 10px;
+}
+
+.matahari {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 55px;
+    animation: melayang 3s ease-in-out infinite;
+}
+
+.label {
+    display: inline-block;
+    padding: 9px 16px;
+    border: 1px solid #c8edff;
+    border-radius: 30px;
+    background: white;
+    color: var(--biru-tua);
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.welcome h1 {
+    margin: 25px 0 15px;
+    color: var(--biru);
+    font-size: clamp(32px, 3.5vw, 48px);
+    font-weight: 900;
+    line-height: 1.15;
+}
+
+.welcome h1 span {
+    display: block;
+    margin-top: 7px;
+    color: var(--pink);
+}
+
+.deskripsi {
+    max-width: 510px;
+    color: #58748b;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+/* ===================================
+   5. ILUSTRASI PANTAI DAN AIR TERJUN
+=================================== */
+
+.ilustrasi {
+    position: relative;
+    height: 260px;
+    margin: 25px 0;
+    overflow: hidden;
+    border: 5px solid white;
+    border-radius: 30px;
+    background: linear-gradient(
+        to bottom,
+        #80dcff 0%,
+        #d5f7ff 49%,
+        #28c0e5 50%,
+        #10a9d5 76%,
+        #ffe5a8 77%,
+        #f7cb7a 100%
+    );
+    box-shadow: 0 15px 35px rgba(46, 153, 199, 0.15);
+}
+
+.pelangi {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    font-size: 65px;
+    animation: melayang 4s ease-in-out infinite;
+}
+
+.air-terjun {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 85px;
+}
+
+.pohon {
+    position: absolute;
+    bottom: 40px;
+    left: 5px;
+    font-size: 75px;
+}
+
+.laut {
+    position: absolute;
+    right: 0;
+    bottom: 42px;
+    left: 0;
+    overflow: hidden;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 5px;
+    white-space: nowrap;
+    animation: ombak 5s ease-in-out infinite;
+}
+
+.pasir {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 45px;
+    background: linear-gradient(
+        180deg,
+        #ffe9b3,
+        #f6ca78
+    );
+}
+
+.anak-anak {
+    position: absolute;
+    bottom: 35px;
+    left: 32%;
+    font-size: 58px;
+    animation: melompat 2s ease-in-out infinite;
+}
+
+.hiasan {
+    position: absolute;
+    right: 15px;
+    bottom: 5px;
+    font-size: 23px;
+    letter-spacing: 5px;
+}
+
+
+/* ===================================
+   6. KEUNGGULAN SEKOLAH
+=================================== */
+
+.keunggulan {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.fitur {
+    padding: 15px 8px;
+    border: 1px solid #dceefa;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.fitur:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(53, 169, 232, 0.13);
+}
+
+.fitur span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 30px;
+}
+
+.fitur p {
+    margin: 0;
+    color: var(--biru-tua);
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 1.5;
+}
+
+.semangat {
+    margin-top: 22px;
+    color: #e95d91;
+    font-size: 14px;
+    font-weight: 900;
+    text-align: center;
+}
+
+
+/* ===================================
+   7. KARTU FORMULIR
+=================================== */
+
+.form-card {
+    min-width: 0;
+    padding: 30px;
+    border: 3px solid white;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 20px 55px rgba(59, 143, 180, 0.13);
+}
+
+.form-header {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 22px;
+}
+
+.form-header > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+    background: #e8f8ff;
+    font-size: 35px;
+}
+
+.form-header h2 {
+    margin: 0;
+    color: var(--biru);
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.form-header p {
+    margin: 5px 0 0;
+    color: var(--abu);
+    font-size: 13px;
+}
+
+
+/* ===================================
+   8. INDIKATOR TAHAP
+=================================== */
+
+.progress-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    color: var(--abu);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 9px;
+    overflow: hidden;
+    border-radius: 30px;
+    background: #edf4f8;
+}
+
+#progress-fill {
+    display: block;
+    width: 33.333%;
+    height: 100%;
+    border-radius: 30px;
+    background: linear-gradient(
+        90deg,
+        var(--biru),
+        var(--ungu),
+        var(--pink)
+    );
+    transition: width 0.3s ease;
+}
+
+
+/* ===================================
+   9. JUDUL TAHAP FORMULIR
+=================================== */
+
+.form-step[hidden] {
+    display: none;
+}
+
+.form-step.active {
+    animation: muncul 0.3s ease;
+}
+
+.judul-tahap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.judul-tahap > span {
+    font-size: 32px;
+}
+
+.judul-tahap h3 {
+    margin: 0;
+    color: var(--biru-tua);
+    font-size: 19px;
+    font-weight: 900;
+}
+
+.judul-tahap p {
+    margin: 4px 0 0;
+    color: var(--abu);
+    font-size: 13px;
+}
+
+
+/* ===================================
+   10. INPUT DAN LABEL
+=================================== */
+
+.form-step label {
+    display: block;
+    margin-bottom: 15px;
+    color: #355d7c;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.form-step label b,
+.form-step legend b {
+    color: var(--pink);
+}
+
+.form-step input:not([type="radio"]):not([type="checkbox"]),
+.form-step select,
+.form-step textarea {
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+    padding: 12px 13px;
+    border: 1.5px solid var(--garis);
+    border-radius: 12px;
+    outline: none;
+    background: #fbfdff;
+    color: var(--teks);
+    font: 600 13px 'Nunito', sans-serif;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-step input:focus,
+.form-step select:focus,
+.form-step textarea:focus {
+    border-color: var(--biru);
+    box-shadow: 0 0 0 3px rgba(53, 169, 232, 0.12);
+}
+
+.form-step textarea {
+    resize: vertical;
+}
+
+.dua-kolom {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+
+/* ===================================
+   11. PILIHAN TK / PAUD
+=================================== */
+
+.form-step fieldset {
+    margin: 0 0 20px;
+    padding: 15px;
+    border: 1.5px solid var(--garis);
+    border-radius: 15px;
+}
+
+.form-step legend {
+    padding: 0 5px;
+    color: #355d7c;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 1.6;
+}
+
+.form-step .pilihan {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 14px 0 0;
+    cursor: pointer;
+}
+
+.form-step input[type="radio"],
+.form-step input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: var(--pink);
+    cursor: pointer;
+}
+
+.form-step .persetujuan {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    line-height: 1.6;
+}
+
+.form-step .persetujuan input {
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+
+/* ===================================
+   12. TOMBOL FORMULIR
+=================================== */
+
+.tombol-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.tombol-dua {
+    justify-content: space-between;
+}
+
+.btn-utama,
+.btn-kembali {
+    padding: 13px 18px;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-utama {
+    background: linear-gradient(
+        100deg,
+        #f45d91,
+        #ff87aa
+    );
+    color: white;
+    box-shadow: 0 7px 18px rgba(244, 93, 145, 0.22);
+}
+
+.btn-utama:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(244, 93, 145, 0.3);
+}
+
+.btn-kembali {
+    background: #e8f6ff;
+    color: var(--biru-tua);
+}
+
+.btn-kembali:hover {
+    transform: translateY(-2px);
+}
+
+.btn-utama:focus-visible,
+.btn-kembali:focus-visible {
+    outline: 3px solid var(--biru);
+    outline-offset: 3px;
+}
+
+.catatan,
+.catatan-demo {
+    color: var(--abu);
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.catatan-demo {
+    margin-top: 15px;
+}
+
+
+/* ===================================
+   13. POP-UP BERHASIL
+=================================== */
+
+.popup-sukses[hidden] {
+    display: none;
+}
+
+.popup-sukses {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    overflow-y: auto;
+    background: rgba(28, 73, 105, 0.65);
+    backdrop-filter: blur(5px);
+}
+
+.kotak-sukses {
+    width: 100%;
+    max-width: 460px;
+    padding: 32px 25px;
+    border: 4px solid white;
+    border-radius: 30px;
+    background: linear-gradient(
+        150deg,
+        white,
+        #fff0f7
+    );
+    box-shadow: 0 25px 80px rgba(20, 55, 77, 0.25);
+    text-align: center;
+    animation: membesar 0.35s ease;
+}
+
+.emoji-perayaan {
+    font-size: 28px;
+}
+
+.emoji-senyum {
+    margin: 10px 0;
+    font-size: 75px;
+    animation: melompat 1s ease-in-out infinite;
+}
+
+.kotak-sukses h2 {
+    margin: 10px 0;
+    color: var(--biru);
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.kotak-sukses > p:not(.catatan-demo) {
+    color: #58748b;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.love-love {
+    margin: 20px 0;
+    font-size: 27px;
+    letter-spacing: 5px;
+    animation: melayang 2s ease-in-out infinite;
+}
+
+.kotak-sukses .btn-utama {
+    margin-top: 10px;
+}
+
+
+/* ===================================
+   14. FOOTER
+=================================== */
+
+footer {
+    padding: 24px 15px;
+    color: #67859a;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* ===================================
+   15. ANIMASI
+=================================== */
+
+@keyframes melayang {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes melompat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+@keyframes ombak {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes membesar {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* ===================================
+   16. TAMPILAN TABLET
+=================================== */
+
+@media (max-width: 950px) {
+    .container {
+        grid-template-columns: 1fr;
+        max-width: 720px;
+    }
+
+    .welcome {
+        padding-top: 10px;
+    }
+
+    .form-card {
+        order: 2;
+    }
+
+    .ilustrasi {
+        height: 230px;
+    }
+}
+
+
+/* ===================================
+   17. TAMPILAN HP
+=================================== */
+
+@media (max-width: 560px) {
+    .header {
+        align-items: flex-start;
+        padding: 13px 15px;
+    }
+
+    .logo {
+        gap: 8px;
+    }
+
+    .logo-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 14px;
+        font-size: 27px;
+    }
+
+    .logo h2 {
+        font-size: 16px;
+    }
+
+    .logo p {
+        max-width: 175px;
+        font-size: 10px;
+    }
+
+    .tahun-ajaran {
+        max-width: 115px;
+        padding: 8px;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .container {
+        gap: 15px;
+        margin: 15px auto;
+        padding: 0 12px;
+    }
+
+    .welcome {
+        padding: 15px 4px;
+    }
+
+    .matahari {
+        top: 5px;
+        right: 5px;
+        font-size: 38px;
+    }
+
+    .label {
+        font-size: 10px;
+    }
+
+    .welcome h1 {
+        font-size: 34px;
+    }
+
+    .deskripsi {
+        font-size: 14px;
+    }
+
+    .ilustrasi {
+        height: 190px;
+        margin: 18px 0;
+        border-radius: 23px;
+    }
+
+    .pelangi {
+        font-size: 48px;
+    }
+
+    .air-terjun {
+        font-size: 60px;
+    }
+
+    .pohon {
+        font-size: 55px;
+    }
+
+    .anak-anak {
+        left: 28%;
+        font-size: 43px;
+    }
+
+    .laut {
+        font-size: 22px;
+    }
+
+    .hiasan {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .keunggulan {
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .fitur {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 15px;
+        text-align: left;
+    }
+
+    .fitur span {
+        margin: 0;
+        font-size: 25px;
+    }
+
+    .fitur p {
+        font-size: 12px;
+    }
+
+    .form-card {
+        padding: 20px 15px;
+        border-radius: 23px;
+    }
+
+    .form-header > span {
+        width: 48px;
+        height: 48px;
+        font-size: 28px;
+    }
+
+    .form-header h2 {
+        font-size: 20px;
+    }
+
+    .form-header p {
+        font-size: 11px;
+    }
+
+    .dua-kolom {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .tombol-area {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tombol-area .btn-utama,
+    .tombol-area .btn-kembali {
+        width: 100%;
+    }
+
+    .catatan {
+        text-align: center;
+    }
+
+    .kotak-sukses {
+        padding: 25px 17px;
+    }
+
+    .kotak-sukses h2 {
+        font-size: 25px;
+    }
+}
+
+
+/* ===================================
+   18. AKSESIBILITAS ANIMASI
+=================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

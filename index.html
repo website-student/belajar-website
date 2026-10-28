@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>PPDB SD Pelangi Ceria</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon">🏫</span>
+        <div>
+          <h2>SD Pelangi Ceria</h2>
+          <p>Belajar • Bermain • Tumbuh Bersama</p>
+        </div>
+      </div>
+
+      <span class="tahun-ajaran"> PPDB 2027/2028 </span>
+    </header>
+
+    <!-- KONTEN UTAMA -->
+    <main class="container">
+      <!-- BAGIAN SAMBUTAN -->
+      <section class="welcome">
+        <div class="matahari">☀️</div>
+
+        <span class="label"> 🌈 PETUALANGAN BARU DIMULAI! </span>
+
+        <h1>
+          Selamat Datang di
+          <span>SD Pelangi Ceria!</span>
+        </h1>
+
+        <p class="deskripsi">
+          Yuk, mulai petualangan baru bersama kami! Belajar menjadi lebih
+          menyenangkan, bertemu teman baru, dan meraih cita-cita bersama. 💖
+        </p>
+
+        <!-- ILUSTRASI -->
+        <div class="ilustrasi">
+          <div class="pelangi">🌈</div>
+          <div class="air-terjun">🏞️</div>
+          <div class="pohon">🌴</div>
+
+          <div class="laut">🌊 🌊 🌊 🌊 🌊</div>
+
+          <div class="pasir"></div>
+
+          <div class="anak-anak">🧒🏻 🎒 👧🏻</div>
+
+          <div class="hiasan">🐚 ⭐ 🐬 🐢 🦀</div>
+        </div>
+
+        <!-- KEUNGGULAN SEKOLAH -->
+        <div class="keunggulan">
+          <div class="fitur">
+            <span>📚</span>
+            <p>Belajar Menyenangkan</p>
+          </div>
+
+          <div class="fitur">
+            <span>⚽</span>
+            <p>Ekstrakurikuler</p>
+          </div>
+
+          <div class="fitur">
+            <span>👩‍🏫</span>
+            <p>Guru Ramah</p>
+          </div>
+        </div>
+
+        <p class="semangat">✨ Setiap anak istimewa dan punya mimpi! ✨</p>
+      </section>
+
+      <!-- FORMULIR PENDAFTARAN -->
+      <section class="form-card" id="pendaftaran">
+        <div class="form-header">
+          <span>📝</span>
+
+          <div>
+            <h2>Formulir Pendaftaran</h2>
+            <p>Calon Siswa Baru SD Pelangi Ceria</p>
+          </div>
+        </div>
+
+        <!-- INDIKATOR TAHAP -->
+        <div class="progress-info">
+          <div class="progress-bar">
+            <div id="progress-fill"></div>
+          </div>
+
+          <span id="step-label"> Langkah 1 dari 3 </span>
+        </div>
+
+        <form id="form-pendaftaran">
+          <!-- TAHAP 1: DATA SISWA -->
+          <div class="form-step active" data-step="0">
+            <div class="judul-tahap">
+              <span>🌟</span>
+              <div>
+                <h3>Data Calon Siswa</h3>
+                <p>Yuk, kenalan terlebih dahulu!</p>
+              </div>
+            </div>
+
+            <label for="nama-siswa">
+              Nama Lengkap Calon Siswa
+              <b>*</b>
+            </label>
+
+            <input
+              type="text"
+              id="nama-siswa"
+              name="nama-siswa"
+              placeholder="Masukkan nama lengkap"
+              required />
+
+            <div class="dua-kolom">
+              <div>
+                <label for="nama-panggilan"> Nama Panggilan </label>
+
+                <input
+                  type="text"
+                  id="nama-panggilan"
+                  name="nama-panggilan"
+                  placeholder="Nama panggilan" />
+              </div>
+
+              <div>
+                <label for="jenis-kelamin">
+                  Jenis Kelamin
+                  <b>*</b>
+                </label>
+
+                <select id="jenis-kelamin" name="jenis-kelamin" required>
+                  <option value="">Pilih jenis kelamin</option>
+                  <option value="Laki-laki">Laki-laki</option>
+                  <option value="Perempuan">Perempuan</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="dua-kolom">
+              <div>
+                <label for="tempat-lahir">
+                  Tempat Lahir
+                  <b>*</b>
+                </label>
+
+                <input
+                  type="text"
+                  id="tempat-lahir"
+                  name="tempat-lahir"
+                  placeholder="Kota kelahiran"
+                  required />
+              </div>
+
+              <div>
+                <label for="tanggal-lahir">
+                  Tanggal Lahir
+                  <b>*</b>
+                </label>
+
+                <input
+                  type="date"
+                  id="tanggal-lahir"
+                  name="tanggal-lahir"
+                  required />
+              </div>
+            </div>
+
+            <label for="alamat-siswa">
+              Alamat Tempat Tinggal
+              <b>*</b>
+            </label>
+
+            <textarea
+              id="alamat-siswa"
+              name="alamat-siswa"
+              rows="3"
+              placeholder="Masukkan alamat lengkap"
+              required></textarea>
+
+            <label for="agama">
+              Agama
+              <b>*</b>
+            </label>
+
+            <select id="agama" name="agama" required>
+              <option value="">Pilih agama</option>
+              <option>Islam</option>
+              <option>Kristen</option>
+              <option>Katolik</option>
+              <option>Hindu</option>
+              <option>Buddha</option>
+              <option>Konghucu</option>
+              <option>Lainnya</option>
+            </select>
+
+            <div class="tombol-area">
+              <span class="catatan">* Wajib diisi</span>
+
+              <button type="button" class="btn-utama tombol-lanjut">
+                Lanjut Data Orang Tua 💗 →
+              </button>
+            </div>
+          </div>
+
+          <!-- TAHAP 2: DATA ORANG TUA -->
+          <div class="form-step" data-step="1" hidden>
+            <div class="judul-tahap">
+              <span>👨‍👩‍👧</span>
+              <div>
+                <h3>Data Orang Tua / Wali</h3>
+                <p>Isi informasi orang tua dengan benar.</p>
+              </div>
+            </div>
+
+            <label for="nama-ayah">
+              Nama Ayah / Wali
+              <b>*</b>
+            </label>
+
+            <input
+              type="text"
+              id="nama-ayah"
+              name="nama-ayah"
+              placeholder="Nama lengkap ayah atau wali"
+              required />
+
+            <label for="nama-ibu">
+              Nama Ibu
+              <b>*</b>
+            </label>
+
+            <input
+              type="text"
+              id="nama-ibu"
+              name="nama-ibu"
+              placeholder="Nama lengkap ibu"
+              required />
+
+            <label for="nomor-wa">
+              Nomor WhatsApp Orang Tua
+              <b>*</b>
+            </label>
+
+            <input
+              type="tel"
+              id="nomor-wa"
+              name="nomor-wa"
+              placeholder="Contoh: 081234567890"
+              required />
+
+            <label for="email-orang-tua"> Email Orang Tua (Opsional) </label>
+
+            <input
+              type="email"
+              id="email-orang-tua"
+              name="email-orang-tua"
+              placeholder="nama@email.com" />
+
+            <label for="pekerjaan"> Pekerjaan Orang Tua / Wali </label>
+
+            <select id="pekerjaan" name="pekerjaan">
+              <option value="">Pilih pekerjaan</option>
+              <option>Pegawai Negeri</option>
+              <option>Pegawai Swasta</option>
+              <option>Wiraswasta</option>
+              <option>Petani / Nelayan</option>
+              <option>Ibu / Bapak Rumah Tangga</option>
+              <option>Lainnya</option>
+            </select>
+
+            <label for="alamat-orang-tua">
+              Alamat Orang Tua
+              <b>*</b>
+            </label>
+
+            <textarea
+              id="alamat-orang-tua"
+              name="alamat-orang-tua"
+              rows="3"
+              placeholder="Masukkan alamat orang tua"
+              required></textarea>
+
+            <div class="tombol-area tombol-dua">
+              <button type="button" class="btn-kembali tombol-kembali">
+                ← Kembali
+              </button>
+
+              <button type="button" class="btn-utama tombol-lanjut">
+                Lanjut Lagi 🌼 →
+              </button>
+            </div>
+          </div>
+
+          <!-- TAHAP 3: RIWAYAT TK / PAUD -->
+          <div class="form-step" data-step="2" hidden>
+            <div class="judul-tahap">
+              <span>🎒</span>
+              <div>
+                <h3>Riwayat TK / PAUD</h3>
+                <p>Sedikit lagi selesai. Semangat! ✨</p>
+              </div>
+            </div>
+
+            <fieldset>
+              <legend>
+                Apakah calon siswa pernah bersekolah di TK / PAUD?
+                <b>*</b>
+              </legend>
+
+              <label class="pilihan">
+                <input
+                  type="radio"
+                  name="riwayat-sekolah"
+                  value="Pernah"
+                  required />
+                🏫 Pernah
+              </label>
+
+              <label class="pilihan">
+                <input
+                  type="radio"
+                  name="riwayat-sekolah"
+                  value="Tidak pernah"
+                  required />
+                🌱 Belum pernah
+              </label>
+            </fieldset>
+
+            <div id="data-tk" hidden>
+              <label for="nama-tk">
+                Nama TK / PAUD
+                <b>*</b>
+              </label>
+
+              <input
+                type="text"
+                id="nama-tk"
+                name="nama-tk"
+                placeholder="Masukkan nama TK / PAUD" />
+
+              <div class="dua-kolom">
+                <div>
+                  <label for="tahun-mulai"> Tahun Mulai </label>
+
+                  <input
+                    type="number"
+                    id="tahun-mulai"
+                    name="tahun-mulai"
+                    placeholder="Contoh: 2024" />
+                </div>
+
+                <div>
+                  <label for="tahun-selesai"> Tahun Selesai </label>
+
+                  <input
+                    type="number"
+                    id="tahun-selesai"
+                    name="tahun-selesai"
+                    placeholder="Contoh: 2026" />
+                </div>
+              </div>
+            </div>
+
+            <label for="catatan"> Catatan Tambahan (Opsional) </label>
+
+            <textarea
+              id="catatan"
+              name="catatan"
+              rows="3"
+              placeholder="Tulis informasi tambahan jika ada"></textarea>
+
+            <label class="persetujuan">
+              <input type="checkbox" name="konfirmasi" required />
+
+              Saya memastikan data yang diisi sudah benar.
+              <b>*</b>
+            </label>
+
+            <div class="tombol-area tombol-dua">
+              <button type="button" class="btn-kembali tombol-kembali">
+                ← Kembali
+              </button>
+
+              <button type="submit" class="btn-utama">
+                Selesaikan Pendaftaran 💖
+              </button>
+            </div>
+
+            <p class="catatan-demo">
+              ℹ️ Ini masih versi demo. Data belum dikirim ke sekolah.
+            </p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- POP-UP BERHASIL -->
+    <div
+      class="popup-sukses"
+      id="popup-sukses"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="judul-sukses"
+      hidden>
+      <div class="kotak-sukses">
+        <div class="emoji-perayaan">🥳 💖 ✨</div>
+
+        <div class="emoji-senyum">😊</div>
+
+        <h2 id="judul-sukses">Yeay! Kamu Hebat!</h2>
+
+        <p>
+          Formulir berhasil diselesaikan di demo ini. Semangat memulai
+          petualangan baru di SD Pelangi Ceria!
+        </p>
+
+        <div class="love-love">💗 💖 💕 💞 💗</div>
+
+        <button type="button" class="btn-utama" id="tutup-popup">
+          Kembali ke Formulir 🌈
+        </button>
+
+        <p class="catatan-demo">
+          Data belum disimpan atau dikirim ke pihak sekolah.
+        </p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      🌈 SD Pelangi Ceria — Belajar dengan gembira, tumbuh bersama.
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
